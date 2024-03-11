@@ -1,0 +1,86 @@
+:host {
+  width: 100%;
+}
+.bot {
+  background-color: #fff;
+  width: 100%;
+  padding: 8px;
+  &__head {
+    padding: 16px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    &-text {
+      margin: 0;
+      color: var(--color-text, var(--Colors-Text-Primary-Text, #282828));
+      font-family: "Roboto";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%;
+    }
+    img {
+      cursor: pointer;
+    }
+  }
+  &__chats {
+    height: calc(100vh - 200px);
+    padding: 24px;
+    overflow-y: scroll;
+    app-chat-input {
+      width: 100%;
+      position: absolute;
+      bottom: 10px;
+    }
+  }
+  &__place {
+    position: relative;
+    border-radius: 4px;
+    background: #eff3f8;
+    height: calc(100vh - 72px);
+  }
+}
+.typing-loader {
+  display: inline-block;
+  width: 80px;
+  text-align: center;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 1px;
+  border-radius: 50%;
+  background-color: #007bff;
+  animation: dot-animation 1.5s infinite ease-in-out both;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.white {
+  max-width: 50%;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 12px 16px;
+  display: inline-block;
+  border-radius: 8px 8px 8px 0px;
+  margin-bottom: 12px;
+}
+.dot:nth-child(3) {
+  animation-delay: 1s;
+}
+
+@keyframes dot-animation {
+  0%,
+  20% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

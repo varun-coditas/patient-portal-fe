@@ -1,0 +1,90 @@
+<div class="container">
+	<div class="container__left">
+		<div>
+			<div class="container__left__title">
+				<img src="/assets/images/therix-logo.svg" alt="" />
+			</div>
+			<p class="container__left-signIn">Sign In</p>
+			<!-- <div class="container__left__google">
+        <img src="../../../assets/images/google-logo.png" alt="" />
+        <span>Log in with Google</span>
+      </div> -->
+			<!-- <img
+				src="/assets/images/divider.png"
+				class="container__left-divider"
+				alt="" /> -->
+			<p
+				[classList]="
+					authenticationFail
+						? 'container__left-error'
+						: 'container__left-error visibilityHidden'
+				">
+				Incorrect User Name or Password. Please try again.
+			</p>
+			<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+				<div class="container__left__form-element-email">
+					<ada-input
+						style="width: 360px"
+						type="text"
+						placeholder="enter your email"
+						formControlName="email"
+						required="true">
+						<div label>Email</div>
+					</ada-input>
+					<p
+						[classList]="
+							!loginForm.get('email')?.pristine &&
+							loginForm.get('email')?.errors
+								? 'container__left-error'
+								: 'container__left-error visibilityHidden'
+						">
+						Enter valid email
+					</p>
+				</div>
+				<div class="container__left__form-element-password">
+					<ada-input
+						style="width: 360px"
+						type="password"
+						placeholder="enter your password"
+						formControlName="password"
+						required="true">
+						<div label>Password</div>
+						<!-- <div secondaryLabel class="container__left__forgetPassword">
+              Forgot password?
+            </div> -->
+
+						<!-- <img
+              inputSuffix
+              src="../../../assets/images/password-eye.png"
+              alt="add Icon"
+            /> -->
+					</ada-input>
+
+					<p
+						[classList]="
+							!loginForm.get('password')?.pristine &&
+							loginForm.get('password')?.errors
+								? 'container__left-error'
+								: 'container__left-error visibilityHidden'
+						">
+						Password length should be more than 6
+					</p>
+				</div>
+				<div class="container__left__loginButton">
+					<ada-button
+						[isDisabled]="loginForm.invalid"
+						(click)="onLogin()"
+						>Log in</ada-button
+					>
+				</div>
+			</form>
+			<!-- <div class="container__left__account">
+        <span class="container__left__account-question">
+          Don't have an account?</span
+        >
+        <span class="container__left__account-access"> Request Access</span>
+      </div> -->
+		</div>
+	</div>
+	<div class="container__right"></div>
+</div>

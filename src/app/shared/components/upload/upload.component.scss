@@ -1,0 +1,31 @@
+.upload {
+  display: flex;
+  padding: 16px 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  border-radius: 8px;
+  border: 1px solid #d1d1d1;
+  background: var(--color-white-base, #fff);
+  cursor: pointer;
+  &-text {
+    color: var(--colors-text-secondary-text, #5a5a5a);
+    margin-left: 2px;
+    &.disable {
+      color: var(--colors-text-disabled-Text, #b4b4b4);
+    }
+  }
+  &__drag {
+    margin-top: 16px;
+    input {
+      display: none;
+    }
+  }
+  &.disable {
+    border: 1px solid var(--Color-Neutral-Grey---50, #f8f8f8);
+  }
+}
+
+.button-label.disable {
+  color: var(--colors-text-disabled-Text, #b4b4b4);
+}

@@ -1,0 +1,85 @@
+.pipeline-flexbox {
+    display: flex;
+
+    .left-panel {
+        flex: 25%;
+        padding: 24px;
+        height: 100%;
+        display: inline-flex;
+        flex-direction: column;
+        border: 1px solid var(--color-bg-grey);
+
+        .connector {
+            display: inline-flex;
+            justify-content: left;
+            column-gap: 44px;
+
+            .vertical-connector-gen {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: relative;
+                left: 10px;
+
+                .lower-link {
+                    border-left: 2px dotted var(--blue-brand-primary);
+                    width: 0px;
+                    top: 40px;
+                    height: 100%;
+                    position: absolute;
+
+                    &.completed {
+                        border-left: 2px solid var(--feedback-green);
+                    }
+                }
+
+                .stepper-circle {
+                    position: absolute;
+                    top: 20px;
+                }
+
+                .hide_vertical_link {
+                    visibility: hidden;
+                }
+            }
+        }
+    }
+
+    .right-panel {
+        flex: 75%;
+        padding: 12px 0px;
+        border: 1px solid var(--color-bg-grey);
+
+        .card-title {
+            padding: 16px;
+            border-radius: 8px 8px 0px 0px;
+            border-bottom: 1px solid var(--color-bg-grey);
+            background: var(--color-bg-hovered);
+            color: var(--colors-text-primary-text);
+            font-family: var(--font-family-Roboto);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 145%;
+            letter-spacing: 0.5px;
+        }
+
+        .card-content {
+            padding: 12px 16px;
+            border-radius: 0px 0px 8px 8px;
+
+            .input-row {
+                display: flex;
+                padding: 16px 0px;
+                align-items: flex-start;
+                gap: 24px;
+                align-self: stretch;
+
+                ada-input {
+                    flex: 1 0 0;
+                }
+            }
+        }
+
+    }
+}

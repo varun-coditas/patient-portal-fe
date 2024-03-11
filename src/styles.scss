@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+@import './scss/common';
+@import './scss/typography';
+@import './scss/variable';
+@import '@angular/cdk/overlay-prebuilt.css';
+
+body {
+	margin: 0;
+}
+
+@import './assets/themes/theme-colors.scss';
+@import './assets/themes/typography.scss';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css');
+
+.markdown {
+	ul {
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 20px;
+		letter-spacing: 0.005em;
+		text-align: left;
+		list-style-type: none;
+		li {
+			background-image: url('./assets/images/arrow-right-blue.svg');
+			background-repeat: no-repeat;
+			background-position: 0 50%;
+			padding-left: 30px;
+		}
+	}
+
+	pre {
+		padding: 16px;
+		border-radius: 8px;
+		border: 1px solid #f2f4f6;
+		margin-left: 64px;
+		code {
+			color: #dc362e;
+		}
+	}
+}
+

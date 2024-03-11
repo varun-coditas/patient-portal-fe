@@ -1,0 +1,51 @@
+<div [classList]="uploadedFiles.length >= 5 ? 'upload disable' : 'upload'" (click)="fileInput.click()">
+  <img
+    [src]="
+      uploadedFiles.length >= 5
+        ? '/assets/images/file-upload-disable-icon.svg'
+        : '/assets/images/file-upload-icon.svg'
+    "
+    alt="file-upload-icon"
+  />
+  <div class="upload__drag">
+    <label
+      [classList]="
+        uploadedFiles.length >= 5 ? 'button-label disable' : 'button-label'
+      ">Click to upload</label
+    >
+    <input
+      #fileInput
+      type="file"
+      [id]="'fileId-' + id"
+      (onClick)="$event.stopPropagation()"
+      [accept]="uploadFileData.accept"
+      (change)="onFileSelection($event)"
+    />
+    <span
+      [classList]="
+        uploadedFiles.length >= 5
+          ? 'upload-text disable body-3-14-regular'
+          : 'upload-text body-3-14-regular'
+      "
+      >or drag and drop</span
+    >
+  </div>
+
+  <div
+    [classList]="
+      uploadedFiles.length >= 5
+        ? 'upload-text disable body-4-12-regular'
+        : 'upload-text body-4-12-regular'
+    "
+  >
+    {{ uploadFileData.information }}
+  </div>
+</div>
+
+@for (file of uploadedFiles; track $index) {
+<app-upload-template
+  [fileName]="file.name"
+  [fileSize]="file.size"
+  (delete)="onDeleteFile($index)"
+></app-upload-template>
+}

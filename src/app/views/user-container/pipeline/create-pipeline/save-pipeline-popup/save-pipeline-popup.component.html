@@ -1,0 +1,24 @@
+
+<div class="popup">
+  <div class="popup__data">
+    <span class="popup__data-key body-4-12-regular">Input</span>
+    <span class="popup__data-value body-4-14-regular">{{
+      inputs.join(", ")
+    }}</span>
+  </div>
+  <div class="popup__data">
+    <span class="popup__data-key body-4-12-regular">AI Model</span>
+    <span class="popup__data-value body-4-14-regular">{{ aiModel }}</span>
+  </div>
+  <div class="popup__data">
+    <span class="popup__data-key body-4-12-regular">Output</span>
+    <span class="popup__data-value body-4-14-regular">{{
+      output.join(", ")
+    }}</span>
+  </div>
+  <div class="popup__action">
+    <ada-button (click)="goToDashboard()" type="secondary"
+      >Go to Dashboard</ada-button
+    >
+  </div>
+</div>

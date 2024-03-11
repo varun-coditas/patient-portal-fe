@@ -1,0 +1,36 @@
+.form {
+	&__row {
+		width: 100%;
+		margin-bottom: 16px;
+		display: grid;
+		gap: 24px;
+	}
+	&__elements {
+		width: 100%;
+		display: flex;
+		gap: 8px;
+	}
+	&__innerField {
+		width: 100%;
+		&-text {
+			color: var(--colors-text-primary-text);
+		}
+	}
+}
+
+app-upload {
+	width: 100%;
+}
+
+ada-input {
+	width: 100%;
+}
+
+ada-dropdown {
+	width: 100%;
+}
+
+ada-textarea {
+	width: 100%;
+	margin: 0;
+}

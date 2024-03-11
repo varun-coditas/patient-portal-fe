@@ -1,0 +1,32 @@
+<div class="bot">
+  <div class="bot__head">
+    <img
+      src="/assets/images/arrow-right.svg"
+      alt="arrow-right"
+      (click)="onBackClick()"
+    />
+    <span class="bot__head-text">{{ pipelineName }}</span>
+  </div>
+  <div class="bot__place">
+    <div class="bot__chats thin-scroll" #chatContainer>
+      @for (chat of chats; track $index) {
+      <app-chat-message
+        [message]="chat.message"
+        [type]="chat.type"
+        [timeStamp]="chat.timeStamp"
+      ></app-chat-message
+      >} @if(isLoading){
+      <div class="white">
+        <div class="typing-loader">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+      }
+    </div>
+    <app-chat-input
+      (sendClick)="onSendClick($event)"
+    ></app-chat-input>
+  </div>
+</div>

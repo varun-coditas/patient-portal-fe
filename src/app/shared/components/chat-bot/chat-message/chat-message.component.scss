@@ -1,0 +1,128 @@
+.chat {
+	margin: 0;
+	box-sizing: border-box;
+	&__avatar {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		margin-bottom: 8px;
+		img {
+			width: 16px;
+		}
+		&-text {
+			color: #000;
+			font-family: 'Roboto';
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 21px;
+			strong {
+				color: red !important;
+			}
+		}
+	}
+
+	&__message {
+		max-width: 65%;
+		box-sizing: border-box;
+		background: #fff;
+		padding: 12px 16px;
+		display: inline-block;
+		border-radius: 8px 8px 8px 0px;
+		margin-bottom: 12px;
+		&-text {
+			color: #111;
+			font-family: 'Roboto';
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 21px;
+			word-wrap: break-word;
+			strong {
+				color: red !important;
+			}
+		}
+	}
+	&__time {
+		color: #667085;
+		font-family: 'Roboto';
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 21px;
+		margin-top: -4px;
+	}
+}
+
+.chatUser {
+	display: flex;
+	justify-content: flex-end;
+	&--width {
+		max-width: 65%;
+	}
+	&__avatar {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		justify-content: flex-end;
+		margin-bottom: 8px;
+		&-circle {
+			border-radius: 50%;
+			border: 1px solid;
+			display: flex;
+			padding: 1px;
+			width: 20px;
+			height: 20px;
+			justify-content: center;
+			align-items: center;
+			color: #667085;
+			font-family: 'Roboto';
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 21px;
+		}
+		&-text {
+			color: #000;
+			font-family: 'Roboto';
+			font-size: 12px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 21px;
+			strong {
+				color: red !important;
+			}
+		}
+	}
+	&__message {
+		box-sizing: border-box;
+		width: 100%;
+		background: #2c74d6;
+		padding: 12px 16px;
+		display: inline-block;
+		border-radius: 8px 8px 8px 0px;
+		margin-bottom: 12px;
+		&-text {
+			color: #fff;
+			font-family: 'Roboto';
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 21px;
+			word-wrap: break-word;
+			strong {
+				color: red !important;
+			}
+		}
+	}
+	&__time {
+		text-align: end;
+		color: #667085;
+		font-family: 'Roboto';
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 21px;
+		margin-top: -4px;
+	}
+}

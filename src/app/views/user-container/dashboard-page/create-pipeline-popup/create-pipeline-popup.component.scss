@@ -1,0 +1,25 @@
+:host {
+  width: 100%;
+}
+.popup {
+  width: 35vw;
+  border-top: 1px solid rgba(137, 140, 145, 0.24);
+  &__box {
+    padding: 8px;
+  }
+  &-title {
+    color: var(--gray-1000);
+  }
+  &__action {
+    margin-top: 12px;
+    display: flex;
+    justify-content: end;
+  }
+}
+
+.count {
+  margin-top: -8px;
+  display: flex;
+  justify-content: end;
+  color: var(--gray-600);
+}

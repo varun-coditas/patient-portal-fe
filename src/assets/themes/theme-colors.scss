@@ -1,0 +1,231 @@
+/**
+  * Shortcuts used in CSS
+  * txt : text
+  * prm : primary
+  * trt : tertiary
+  * brd : border
+  * act :active
+  * dsbl : diasble
+  * hvr : hover
+  * lbl : label
+  * bde : badge
+  * shdw : shadow
+  * lvl : level
+  * fdbk : feedback
+  */
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  /**
+  *Basic Colors
+  */
+  --white: #ffffff;
+  /**
+  *Brand Color
+  */
+  --blue-brand-primary: #2c74d6;
+  --blue-grey-secondary: #e4eaf2;
+  /* ============================================= */
+  /**
+  *Feedback Color
+  */
+  --feedback-red: #dc362e;
+  --feedback-orange: #f79009;
+  --feedback-green: #16af24;
+  --feedback-yellow: #fbc743;
+  /* ============================================= */
+  /**
+  *Primary Color
+  */
+  --primary-2400: #0d69d4;
+
+  // background-color: #235dab;
+  --primary-2300: #0e4791;
+  --primary-2200: #135fc2;
+  --primary-2100: #285092;
+  --primary-2000: #356ac3;
+  --primary-1900: #1da1f2;
+  --primary-1800: #116191;
+  --primary-1700: #1781c2;
+  --primary-1600: #205da8;
+  --primary-1500: #133865;
+  --primary-1400: #1a4a86;
+  --primary-1300: #1877f2;
+  --primary-1200: #050708;
+  --primary-1100: #4285f4;
+  --primary-1000: #040c15;
+  --primary-900: #09172b;
+  --primary-800: #122e56;
+  --primary-700: #1a4680;
+  --primary-600: #235dab;
+  --primary-base: #2c74d6;
+  --primary-500: #5690de;
+  --primary-400: #80ace6;
+  --primary-300: #abc7ef;
+  --primary-200: #d5e3f7;
+  --primary-100: #eaf1fb;
+
+  /* ============================================= */
+  /**
+  Blue Greys
+  **/
+
+  --blue-grey-1200: rgba(0, 0, 0, 0.54);
+  --blue-grey-1100: #cccccc;
+  --blue-grey-1000: #171718;
+  --blue-grey-900: #2e2f30;
+  --blue-grey-800: #5b5e61;
+  --blue-grey-700: #898c91;
+  --blue-grey-600: #b6bbc2;
+  --blue-grey-base: #e4eaf2;
+  --blue-grey-500: #e9eef5;
+  --blue-grey-400: #eff2f7;
+  --blue-grey-300: #f4f7fa;
+  --blue-grey-200: #fafbfc;
+  --blue-grey-100: #fcfdfe;
+
+  /* ============================================= */
+
+  /**
+	Grey
+	**/
+  --grey-1800: #333333;
+  --grey-1700: #0d0d0d;
+  --grey-1600: #6e6e6e;
+  --grey-1500: #3d3d3d;
+  --grey-1410: #dddddd;
+  --grey-1310: #333333;
+  --grey-1210: #2f2f2f;
+  --grey-1100: #5e5e5e;
+  --grey-1000: #1c1c1c;
+  --grey-900: #383838;
+  --grey-800: #545454;
+  --grey-700: #707070;
+  --grey-600: #8c8c8c;
+  --grey-500: #a3a3a3;
+  --grey-400: #bababa;
+  --grey-300: #d1d1d1;
+  --grey-200: #e8e8e8;
+  --grey-100: #f3f3f3;
+  --grey-50: #bbbbbb;
+  --grey-25: #f5f6f6;
+  --grey-1100: #0e0e0e;
+  --grey-1200: #777777;
+  --grey-1300: #999999;
+  --grey-1400: #111111;
+
+  /* ============================================= */
+
+  /**
+	Green
+	**/
+  --green-1000: #021204;
+  --green-900: #042307;
+  --green-800: #09460e;
+  --green-700: #0d6916;
+  --green-600: #128c1d;
+  --green-base: #16af24;
+  --green-500: #45bf50;
+  --green-400: #73cf7c;
+  --green-300: #a2dfa7;
+  --green-200: #d0efd3;
+  --green-100: #e8f7e9;
+
+  /* ============================================= */
+
+  /**
+	Red
+	**/
+  --red-1200: #3b113c;
+  --red-1100: #2c0d2d;
+  --red-1000: #160505;
+  --red-900: #2c0b09;
+  --red-800: #581612;
+  --red-700: #84201c;
+  --red-600: #b02b25;
+  --red-base: #dc362e;
+  --red-500: #e35e58;
+  --red-400: #ea8682;
+  --red-300: #f1afab;
+  --red-200: #f8d7d5;
+  --red-100: #fbebea;
+
+  /* ============================================= */
+
+  /**
+	orange
+	**/
+  --orange-1100: #4a154b;
+  --orange-1000: #190e01;
+  --orange-900: #311d02;
+  --orange-800: #633a04;
+  --orange-700: #945605;
+  --orange-600: #c67307;
+  --orange-base: #f79009;
+  --orange-500: #f9a63a;
+  --orange-400: #fabc6b;
+  --orange-300: #fcd39d;
+  --orange-200: #fde9ce;
+  --orange-100: #fef4e6;
+
+  /* ============================================= */
+
+  /**
+box-shadow
+**/
+
+  // blue-grey-600
+
+  --shdw-bluegrey-lvl-1: 0px 1px 2px rgba(137, 140, 145, 0.24);
+  --shdw-bluegrey-lvl-2: 0px 2px 4px rgba(137, 140, 145, 0.2);
+  --shdw-bluegrey-lvl-3: 0px 4px 8px rgba(137, 140, 145, 0.2);
+  --shdw-bluegrey-lvl-4: 0px 4px 12px rgba(137, 140, 145, 0.24);
+  --shdw-bluegrey-lvl-5: 0px 8px 16px rgba(137, 140, 145, 0.3);
+  --shdw-bluegrey-lvl-6: 0px 12px 20px rgba(137, 140, 145, 0.32);
+  --shdw-bluegrey-lvl-7: 0px 16px 24px rgba(137, 140, 145, 0.36);
+  --shdw-bluegrey-lvl-8: 0px 0px 0px rgba(0, 0, 0, 0.08);
+  --shdw-bluegrey-lvl-9: 0px 1px 2px rgba(0, 0, 0, 0.25);
+
+  // blue-(primary brand)
+
+  --shdw-blueprimary-lvl-1: 0px 1px 2px rgba(44, 116, 214, 0.24);
+  --shdw-blueprimary-lvl-2: 0px 2px 4px rgba(44, 116, 214, 0.2);
+  --shdw-blueprimary-lvl-3: 0px 4px 8px rgba(44, 116, 214, 0.2);
+  --shdw-blueprimary-lvl-4: 0px 4px 12px rgba(44, 116, 214, 0.24);
+  --shdw-blueprimary-lvl-5: 0px 8px 16px rgba(44, 116, 214, 0.32);
+  --shdw-blueprimary-lvl-6: 0px 12px 20px rgba(44, 116, 214, 0.32);
+  --shdw-blueprimary-lvl-7: 0px 16px 24px rgba(44, 116, 214, 0.36);
+
+  // green-(feedback)
+
+  --shdw-greenfdbk-lvl-1: 0px 1px 2px rgba(22, 175, 36, 0.24);
+  --shdw-greenfdbk-lvl-2: 0px 2px 4px rgba(22, 175, 36, 0.2);
+  --shdw-greenfdbk-lvl-3: 0px 4px 8px rgba(22, 175, 36, 0.2);
+  --shdw-greenfdbk-lvl-4: 0px 4px 12px rgba(22, 175, 36, 0.24);
+  --shdw-greenfdbk-lvl-5: 0px 8px 16px rgba(22, 175, 36, 0.32);
+  --shdw-greenfdbk-lvl-6: 0px 12px 20px rgba(22, 175, 36, 0.32);
+  --shdw-greenfdbk-lvl-7: 0px 16px 24px rgba(22, 175, 36, 0.36);
+
+  // orange-(feedback)
+
+  --shdw-orangefdbk-lvl-1: 0px 1px 2px rgba(247, 144, 9, 0.24);
+  --shdw-orangefdbk-lvl-2: 0px 2px 4px rgba(247, 144, 9, 0.2);
+  --shdw-orangefdbk-lvl-3: 0px 4px 8px rgba(247, 144, 9, 0.2);
+  --shdw-orangefdbk-lvl-4: 0px 4px 12px rgba(247, 144, 9, 0.24);
+  --shdw-orangefdbk-lvl-5: 0px 8px 16px rgba(247, 144, 9, 0.32);
+  --shdw-orangefdbk-lvl-6: 0px 12px 20px rgba(247, 144, 9, 0.32);
+  --shdw-orangefdbk-lvl-7: 0px 16px 24px rgba(247, 144, 9, 0.36);
+
+  // red-(feedback)
+
+  --shdw-redfdbk-lvl-1: 0px 1px 2px rgba(220, 54, 46, 0.24);
+  --shdw-redfdbk-lvl-2: 0px 2px 4px rgba(220, 54, 46, 0.2);
+  --shdw-redfdbk-lvl-3: 0px 4px 8px rgba(220, 54, 46, 0.2);
+  --shdw-redfdbk-lvl-4: 0px 4px 12px rgba(220, 54, 46, 0.24);
+  --shdw-redfdbk-lvl-5: 0px 8px 16px rgba(220, 54, 46, 0.32);
+  --shdw-redfdbk-lvl-6: 0px 12px 20px rgba(220, 54, 46, 0.32);
+  --shdw-redfdbk-lvl-7: 0px 16px 24px rgba(220, 54, 46, 0.36);
+
+  //shadow grey
+  --shdw-greyfdbk-lvl-1: 0px 8px 16px 0px rgba(255, 255, 255, 0.5);
+}

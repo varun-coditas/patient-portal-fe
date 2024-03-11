@@ -1,0 +1,29 @@
+<div class="header-container">
+	<div class="header-container-content">
+		<div>
+			<img
+				src="../../../../assets/images/new-logo.png"
+				style="height: 65px;"
+				alt="header-logo" />
+		</div>
+
+		<div class="header">
+			<img
+				class="header-notification"
+				src="../../../assets/images/notification-icon.png"
+				alt="searchbar" />
+			<div class="header__user">
+				<div class="header__user__avatar">
+					<span>{{ initialsOfName }}</span>
+				</div>
+				<span class="header__user-name">{{ renderName }}</span>
+				<img
+					appGetOrigin
+					(clickOrigin)="openPopover($event)"
+					class="header__user-downwardArrow"
+					src="../../../assets/images/downward-arrow.png"
+					alt="" />
+			</div>
+		</div>
+	</div>
+</div>

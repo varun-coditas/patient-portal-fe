@@ -1,0 +1,20 @@
+.body {
+  display: grid;
+  grid-template-columns: auto 60px;
+  align-items: center;
+  gap: 12px;
+  box-sizing: border-box;
+  .progress {
+    border-radius: 4px;
+    background: var(--color-primary-blue-50, #f0f8fe);
+    .bar {
+      height: 8px;
+      border-radius: 4px;
+      background: var(--colors-brand-color, #2c74d6);
+    }
+    &-text {
+      margin: 0;
+      color: var(--gray-700);
+    }
+  }
+}

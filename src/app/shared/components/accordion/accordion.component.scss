@@ -1,0 +1,42 @@
+.accordion-item {
+    border: 1px solid #ddd;
+
+    .accordion-header {
+        padding: 12px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--color-bg-grey);
+
+        .icon-image {
+            width: 24px;
+            height: 24px;
+        }
+
+        .left-section {
+            display: flex;
+            align-items: center;
+
+            .left-icon {
+                height: 24px;
+                width: 24px;
+                margin-right: 8px;
+            }
+
+            .header-text {
+                margin-right: 10px;
+            }
+        }
+
+        .right-icon {
+            height: 16px;
+            width: 16px;
+        }
+
+    }
+
+    .accordion-content {
+        padding: 8px;
+    }
+}

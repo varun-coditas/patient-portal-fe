@@ -1,0 +1,388 @@
+/**
+* Shortcuts used in CSS
+* hd : heading
+* fnt : font
+* wt : weight
+* fm : family
+* ltr : letter
+* spc : spacing
+* ln : line
+* hgt : height
+* bd : body
+* md : medium
+* sm : small
+* lg : large
+* btn : Button
+* tbl : table
+* ttl : title
+* lbl : label
+* inp : input
+* fld : fields
+* cpt : caption
+* lg : Large
+* md : medium
+* inp : input
+* plc : Placeholder
+* hld : holder
+* txt : text
+* er : error
+* hnt : hint
+* rg  : regular
+* ds  : display
+* sz  : size
+* hpl : hyperlink
+*/
+
+/* Roboto */
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto/Roboto-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto/Roboto-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto/Roboto-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto/Roboto-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto/Roboto-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto/Roboto-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto/Roboto-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto/Roboto-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Montserrat */
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat/Montserrat-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat/Montserrat-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat/Montserrat-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat/Montserrat-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat/Montserrat-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat/Montserrat-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat/Montserrat-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat/Montserrat-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat/Montserrat-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat/Montserrat-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat/Montserrat-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat/Montserrat-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat/Montserrat-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+:root {
+
+/* Display Fonts */
+
+  /* Font Family */
+  --ds-fnt-fm: "Montserrat";
+
+  /* Line Height */
+  --ds-fnt-ln-hgt-1: 6.75em;     /* 108px */
+  --ds-fnt-ln-hgt-2: 6.0625em;   /* 97px */
+  --ds-fnt-ln-hgt-3: 5.375em;   /* 86px */
+
+  /* Letter Spacing */
+  --ds-fnt-ltr-spc: 0.03125em;  /* 0.5px */
+
+  /* Font Size */
+  --ds-fnt-sz-1: 5em;    /* 80px */
+  --ds-fnt-sz-2: 4.5em;  /* 72px */
+  --ds-fnt-sz-3: 4em;    /* 64px */
+
+  /* Font Weight */
+  --ds-fnt-wt-lg: 700;
+  --ds-fnt-wt-md: 500;
+  --ds-fnt-wt-sm: 300;
+
+  /*--------------------------------------------*/
+
+/* Headline Fonts */
+
+  /* Font Family */
+  --hd-fnt-fm: "Montserrat";
+
+  /* Line Height */
+  --hd-fnt-ln-hgt-1: 3.3125em;  /* 53px */
+  --hd-fnt-ln-hgt-2: 2.375em;   /* 38px */
+  --hd-fnt-ln-hgt-3: 1.875em;   /* 30px */
+  --hd-fnt-ln-hgt-4: 1.625em;   /* 26px */
+  --hd-fnt-ln-hgt-5: 1.6875em;  /* 27px */
+  --hd-fnt-ln-hgt-6: 1.5em;     /* 24px */
+
+  /* Letter Spacing */
+  --hd-fnt-ltr-spc: 0.03125em;  /* 0.5px */
+  --hd-fnt-2-ltr-spc: 0.0156em;   /*0.25 */
+
+
+  /* Font Size */
+  --hd-fnt-sz-1: 3em;       /* 48px */
+  --hd-fnt-sz-2: 2em;       /* 32px */
+  --hd-fnt-sz-3: 1.5em;     /* 24px */
+  --hd-fnt-sz-4: 1.25em;    /* 20px */
+  --hd-fnt-sz-5: 1.125em;   /* 18px */
+  --hd-fnt-sz-6: 1em;       /* 16px */
+  --hd-fnt-sz-7: 0.875em;   /* 14px */
+  --hd-fnt-sz-8: 0.75em;    /* 12px */
+
+  /* Font Weight */
+  --hd-fnt-wt-lg: 700;
+  --hd-fnt-wt-md: 500;
+  --hd-fnt-wt-rg: 400;
+
+/*------------------------------------------------*/
+
+/* Body Fonts */
+
+  /* Font Family */
+  --bd-fnt-fm: "Roboto";
+  /* Line Height */
+  --bd-fnt-ln-hgt-1: 1.875em;     /* 30px */
+  --bd-fnt-ln-hgt-2: 1.5em;       /* 24px */
+  --bd-fnt-ln-hgt-3: 1.25em;      /* 20px */
+  --bd-fnt-ln-hgt-4: 1.125em;     /* 18px */
+  --bd-fnt-ln-hgt-5: 1.3em;       /* 20.8px */
+  --bd-fnt-ln-hgt-6: 1.4em;       /* 22.4px */
+  --bd-fnt-ln-hgt-7: 1.5em;       /* 24px */
+  --bd-fnt-ln-hgt-8: 1.45em;      /* 23.2px */
+  --bd-fnt-ln-hgt-7:1.375em        /*22px */
+   --bd-fnt-ln-hgt-9:1.2688em     /*20.3px */
+  /* Letter Spacing */
+  --bd-fnt-ltr-spc: 0.03125em;  /* 0.5px */
+  --bd-fnt-2tr-spc: 0.0156em;   /*0.25 */
+
+  /* Font Size */
+  --bd-fnt-sz-1: 1.25em;    /* 20px */
+  --bd-fnt-sz-2: 1em;       /* 16px */
+  --bd-fnt-sz-3: 0.875em;   /* 14px */
+  --bd-fnt-sz-4: 0.75em;      /* 12px */
+
+  /* Font Weight */
+  --bd-fnt-wt-lg: 700;
+  --bd-fnt-wt-md: 500;
+  --bd-fnt-wt-rg: 400;
+  --bd-fnt-wt-sm: 300;
+
+/*------------------------------------------------*/
+
+/* Caption Fonts */
+
+  /* Font Family */
+  --cpt-fnt-fm: "Roboto";
+
+  /* Line Height */
+  --cpt-fnt-ln-hgt-1: 1.125em;     /* 18px */
+  --cpt-fnt-ln-hgt-2: 1em;       /* 16px */
+
+  /* Letter Spacing */
+  --cpt-fnt-ltr-spc: 0.03125em;  /* 0.5px */
+
+  /* Font Size */
+  --cpt-fnt-sz-1: 0.875em;      /* 14px */
+  --cpt-fnt-sz-2: 0.75em;      /* 12px */
+
+  /* Font Weight */
+  --cpt-fnt-wt-md: 500;
+  --cpt-fnt-wt-rg: 400;
+
+/*------------------------------------------------*/
+
+/* Hyperlink Fonts */
+
+  /* Font Family */
+  --hpl-fnt-fm: "Roboto";
+
+  /* Line Height */
+  --hpl-fnt-ln-hgt-1: 1.5em;       /* 24px */
+  --hpl-fnt-ln-hgt-2: 1.25em;      /* 20px */
+
+  /* Letter Spacing */
+  --hpl-fnt-ltr-spc: 0.03125em;  /* 0.5px */
+
+  /* Font Size */
+  --hpl-fnt-sz-1: 1em;          /* 16px */
+  --hpl-fnt-sz-2: 0.875em;      /* 14px */
+
+  /* Font Weight */
+  --hpl-fnt-wt-md: 500;
+  --hpl-fnt-wt-rg: 400;
+
+/*------------------------------------------------*/
+
+/* Button Fonts */
+
+  /* Font Family */
+  --btn-fnt-fm: "Roboto";
+
+  /* Line Height */
+  --btn-fnt-ln-hgt-1: 1.25em;      /* 20px */
+  --cpt-fnt-ln-hgt-2: 1.125em;     /* 18px */
+
+  /* Letter Spacing */
+  --btn-fnt-ltr-spc: 0.03125em;  /* 0.5px */
+
+  /* Font Size */
+  --btn-fnt-sz-1: 0.875em;      /* 14px */
+  --btn-fnt-sz-2: 0.75em;      /* 12px */
+
+  /* Font Weight */
+  --btn-fnt-wt-lg: 700;
+
+
+  /* Font Weight */
+  --lbl-inp-fld: 500;
+  --lbl-inp-fld-font-size-md: 14px
+  --lbl-md-ln-hgt:145%
+
+
+
+}

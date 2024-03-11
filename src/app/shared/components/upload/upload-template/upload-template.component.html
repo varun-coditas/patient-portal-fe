@@ -1,0 +1,39 @@
+<div [classList]="status == 'error' ? 'upload error' : 'upload'">
+  @if (status != 'error') {
+  <div class="upload-content">
+    <div class="upload__file">
+      <span class="upload-file body-3-14-regular">{{ fileName }}</span>
+      <span class="upload-size body-3-14-regular">{{ getFilesize() }}</span>
+    </div>
+    <div class="upload__icons">
+      <img
+        src="/assets/images/delete-icon.svg"
+        alt="delete"
+        style="width: 24px"
+        (click)="onDeleteClick()"
+      />
+      @if (status=="complete") {<img
+        src="/assets/images/checked-blue.svg"
+        alt="tick"
+      />}
+    </div>
+  </div>
+  } @else {
+  <div class="upload-content-failed">
+    <div class="upload-content-failed__file">
+      <span class="upload-content-failed-file text-medium"
+        >Upload failed, please try again</span
+      >
+      <span class="upload-content-failed-name text-normal"
+        >Dashboard prototype FINAL.fig</span
+      >
+    </div>
+    <div class="upload-content-failed__icons">
+      <img src="/assets/images/delete-icon-red.svg" alt="delete" />
+    </div>
+  </div>
+  <p class="button-destructive">Try again</p>
+  } @if (status == "uploading") {
+  <app-progress-bar></app-progress-bar>
+  }
+</div>

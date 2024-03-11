@@ -1,0 +1,21 @@
+<form>
+  <div class="popup">
+    <p class="body-2-16-regular popup-title">
+      Please enter a descriptive name for your new pipeline below.
+    </p>
+    <div class="popup__box">
+      <ada-input [(ngModel)]="pipelineName" (ngModelChange)="checkForLength()" name="pipelineName">
+        <div label>Pipeline Name</div>
+      </ada-input>
+      <div class="count">
+        <p class="body-4-12-regular">{{ pipelineName.length }}/220</p>
+      </div>
+    </div>
+    <div class="popup__action">
+      <ada-button [type]="'secondary'" tabIndex="0" [isDisabled]="pipelineName.length == 0" (click)="create()"
+        style="height: 44px">
+        Create
+      </ada-button>
+    </div>
+  </div>
+</form>

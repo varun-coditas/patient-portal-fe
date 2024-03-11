@@ -1,0 +1,25 @@
+<div class="delete">
+  <span class="body-2-16-regular delete__title">
+    Are you sure you want to delete this pipeline? This action cannot be undone
+    and you will lose all the information.</span
+  >
+  <span class="caption delete__name">{{ pipelineData.pipelineName }}</span>
+  <div class="delete__field">
+    <span class="delete__field-lable">Input</span>
+    <span class="delete__field-value">{{
+      pipelineData.input.length ? pipelineData.input.join(", ") : "--"
+    }}</span>
+  </div>
+  <div class="delete__field">
+    <span class="delete__field-lable">AI Model</span>
+    <span class="delete__field-value">{{
+      pipelineData.aiModel ? pipelineData.aiModel : "--"
+    }}</span>
+  </div>
+  <div class="delete__field">
+    <span class="delete__field-lable">Output</span>
+    <span class="delete__field-value">{{
+      pipelineData.output.length ? pipelineData.output.join(", ") : "--"
+    }}</span>
+  </div>
+</div>

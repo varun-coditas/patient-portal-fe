@@ -1,0 +1,212 @@
+<div class="welcomeContainer">
+	<div>
+		<p class="welcomeContainer-welcome">Welcome back, {{user.name}}!</p>
+		<p class="welcomeContainer-para">
+			You can see your details here
+		</p>
+	</div>
+	<ada-button class="welcomeContainer-button">
+		<div class="welcomeContainer__flex">
+			<img class="plus" src="../../../../assets/images/plus.svg" alt="" />
+			<span>Schedule Appointment</span>
+		</div>
+	</ada-button>
+</div>
+<div class="main">
+	<!-- Pipeline Header Start -->
+	<div class="nav-header">
+		<div class="nav-header-content">
+			<img
+				class="back-arrow"
+				src="/assets/icons/ic_info.svg"
+				alt="Back arrow" />
+			<span class="pipeline-title">Your Details</span>
+		</div>
+	</div>
+	<!-- Pipeline Header End -->
+
+	<!-- Stepper Start -->
+	<app-stepper
+		class="stepper"
+		#customStepper
+		>
+		<cdk-step>
+			<ng-template cdkStepLabel let-activeStep="activeStep">
+				<app-accordion
+					#customAccordion
+					[class.active]="activeStep"
+					accordionTitle="Personal Information"
+					accordionIcon="ic_chart_bar">
+					<ul class="nested-input-list">
+						<li class="actual-list-item">Manage demographics, contacts, and preferences</li>
+					</ul>
+				</app-accordion>
+			</ng-template>
+
+			<div class="step-details">
+				<ada-card class="info-card">
+					<div class="card-title">Personal Information</div>
+					<ada-card-content>
+						<div class="card-content">
+							<section id="profileSection">
+								<div id="basicInfo">
+								  <p><strong>Full Name:</strong> <span id="firstName">{{user.name}}</span></p>
+								</div>
+								<div id="birthdateInfo">
+								  <p><strong>Date of Birth:</strong> <span id="birthDate">July 11, 1955</span></p>
+								</div>
+								<div id="contactInfo">
+								  <h3>Emergency Contact Details</h3>
+								  <p><strong>Contact Name:</strong> <span id="emergencyContactName">Elizabeth Schuyler</span></p>
+								  <p><strong>Relationship:</strong> <span id="emergencyContactRelationship">Spouse</span></p>
+								  <p><strong>Contact Phone:</strong> <span id="emergencyContactPhone">+1 (234) 567-8901</span></p>
+								</div>
+							  </section>							  
+						</div>
+					</ada-card-content>
+				</ada-card>
+			</div>
+
+			
+		</cdk-step>
+		<cdk-step>
+			<ng-template cdkStepLabel let-activeStep="activeStep">
+				<app-accordion
+					#customAccordion
+					[class.active]="activeStep"
+					accordionTitle="Medical History"
+					accordionIcon="ic_chart_bar">
+					<ul class="nested-input-list">
+						<li class="actual-list-item">View and update chronic conditions, allergies, meds, surgeries, and immunizations.</li>
+					</ul>
+				</app-accordion>
+			</ng-template>
+
+			<div class="step-details">
+				<ada-card class="info-card">
+					<div class="card-title">Patient Medical History</div>
+					<ada-card-content>
+						<div class="card-content">
+							<section id="medicalHistory">
+								<h3>Medical History</h3>
+								<p><strong>Allergies:</strong> Penicillin, peanuts</p>
+								<p><strong>Medications:</strong> Aspirin, ibuprofen</p>
+								<p><strong>Surgeries:</strong> Surgery A (May 2019), Surgery B (June 2018)</p>
+								<p><strong>Insurance Provider:</strong> Insurance Company XYZ</p>
+								<p><strong>Insurance Plan:</strong> Bronze Plan</p>
+								<p><strong>Primary Care Physician:</strong> Dr. Jane Doe</p>
+								<p><strong>Secondary Care Provider:</strong> Dr. John Smith</p>
+								<p><strong>Medical Conditions:</strong> Diabetes, Hypertension, Asthma</p>
+								<p><strong>Past Surgeries:</strong> Surgery A (May 2019), Surgery B (June 2018)</p>
+								<p><strong>Current Medications:</strong> Aspirin, ibuprofen</p>
+								<p><strong>Recent Imaging Studies:</strong> MRI on June 1, 2020, CT scan on July 3, 2020</p>
+								<p><strong>Family Medical History:</strong> Heart disease, stroke, diabetes</p>
+							</section>
+						</div>
+					</ada-card-content>
+				</ada-card>
+			</div>
+		</cdk-step>
+		<cdk-step [completed]="stepperState.outputStep.isStepComplete">
+			<ng-template cdkStepLabel let-activeStep="activeStep">
+				<app-accordion
+					#customAccordion
+					[class.active]="activeStep"
+					accordionTitle="Lab Results & Imaging"
+					accordionIcon="ic_chart_bar">
+					<ul class="nested-input-list">
+						<li class="actual-list-item">Access test results and diagnostic images securely.</li>
+					</ul>
+				</app-accordion>
+			</ng-template>
+
+			<div class="step-details">
+				<ada-card class="info-card">
+					<div class="card-title">Lab Tests and Imaging</div>
+					<ada-card-content>
+						<div class="card-content">
+							<section id="labTestsAndImaging">
+								<h3>Lab Tests</h3>
+								<p><strong>Chemistry:</strong> Hemoglobin (19.8 g/dL), Hematocrit (45%), Mean Corpuscular Volume (62.7 fL), Mean Corpuscular Hemoglobin (80.3 ppm)</p>
+								<p><strong>Blood Count:</strong> Red Blood Cell (19,000 cells/mm^3), White Blood Cell (4,500 cells/mm^3), Platelet (180,000 platelets/mm^3)</p>
+							<h3>Imaging</h3>
+							<p><strong>CT Scan:</strong> Lung (50%), Brain (70%)</p>
+							<p><strong>MRI:</strong> Heart (60%), Liver (80%)</p>
+						</section>
+						</div>
+					</ada-card-content>
+				</ada-card>
+			</div>
+		</cdk-step>
+		<cdk-step>
+			<ng-template cdkStepLabel let-activeStep="activeStep">
+				<app-accordion
+					#customAccordion
+					[class.active]="activeStep"
+					accordionTitle="Care Plan & Appointments"
+					accordionIcon="ic_chart_bar">
+					<ul class="nested-input-list">
+						<li class="actual-list-item">Review upcoming appointments, past visits, and notes from providers.</li>
+					</ul>
+				</app-accordion>
+			</ng-template>
+			<div class="step-details">
+				<ada-card class="info-card">
+					<div class="card-title">Care Plan</div>
+					<ada-card-content>
+						<div class="card-content">
+							<section id="carePlan">
+								<h3>Goals and Objectives</h3>
+								<p><strong>Primary Goal:</strong> To manage chronic disease and reduce the risk of complications.</p>
+								<p><strong>Secondary Goals:</strong> To maintain a healthy weight, improve blood pressure control, and manage diabetes symptoms.</p>
+								<h3>Action Plan</h3>
+								<p><strong>Diet:</strong> Avoid sugary drinks and foods high in saturated fats. Eat a healthy, balanced diet with plenty of fruits, vegetables, whole grains, lean proteins, and low-fat dairy products.</p>
+								<p><strong>Exercise:</strong> Aim for at least 150 minutes of moderate-intensity aerobic exercise or 75 minutes of vigorous-intensity aerobic exercise, or a combination of both each week.</p>
+								<p><strong>Stress Management:</strong> Practice stress-reducing activities such as meditation, deep breathing exercises, or yoga.</p>
+								<h3>Support Resources</h3>
+								<p><strong>Primary Care Physician:</strong> Dr. Jane Doe</p>
+								<p><strong>Secondary Care Provider:</strong> Dr. John Smith</p>
+								<p><strong>Care Coordinator:</strong> Sarah Johnson</p>
+								<p><strong>Social Worker:</strong> Emily Brown</p>
+								<p><strong>Nutritionist:</strong> Rachel Patel</p>
+								<p><strong>Psychologist:</strong> Dr. David Lee</p>
+								<p><strong>Speech Therapist:</strong> Rachel Chen</p>
+							</section>
+						</div>
+					</ada-card-content>
+				</ada-card>
+			</div>
+		</cdk-step>
+		<cdk-step>
+			<ng-template cdkStepLabel let-activeStep="activeStep">
+				<app-accordion
+					#customAccordion
+					[class.active]="activeStep"
+					accordionTitle="Education & Communication"
+					accordionIcon="ic_chart_bar">
+					<ul class="nested-input-list">
+						<li class="actual-list-item">Access health resources, communicate with your care team, and receive updates on your care plan.</li>
+					</ul>
+				</app-accordion>
+			</ng-template>
+			<div class="step-details">
+				<ada-card class="info-card">
+					<div class="card-title">Education and External Sources</div>
+					<ada-card-content>
+						<div class="card-content">
+							<section id="educationAndExternalSources">
+								<h3>Education</h3>
+								<p><strong>Diabetes:</strong> <a href="https://diabetes.org/">Diabetes UK</a>, <a href="https://www.nhs.uk/">National Health Service (NHS) Digital</a></p>
+								<p><strong>Hypertension:</strong> <a href="http://mayoclinic.org/">Mayo Clinic</a>, <a href="https://www.americanheart.org/">American Heart Association</a></p>
+								<h3>External Sources</h3>
+								<p><strong>Websites:</strong> <a href="https://diabetes.org/">Diabetes.org</a>, <a href="https://hypertension.org/">Hypertension.org</a>, <a href="https://www.nlm.nih.gov/">National Library of Medicine (NLM)</a></p>
+								<p><strong>Apps:</strong> <a href="https://my-sugr.com/">MySugr</a>, <a href="https://www.diabeloop.com/en/">Diabeloop</a>, <a href="https://www.misure.io/">MiSure</a></p>
+							</section>
+						</div>
+					</ada-card-content>
+				</ada-card>
+			</div>
+		</cdk-step>
+	</app-stepper>
+	<!-- Stepper End -->
+</div>

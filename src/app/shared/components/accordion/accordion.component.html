@@ -1,0 +1,14 @@
+<div class="accordion-item" (click)="toggleAccordion($event)">
+    <div class="accordion-header">
+        <div class="left-section">
+            <img [src]="accordionIcon? '/assets/icons/'+accordionIcon+'.svg': '/favicon.ico'"
+                alt="Left Image" class="icon-image left-icon">
+            <span class="header-text">{{ accordionTitle }}</span>
+        </div>
+        <img [src]="expanded?'/assets/icons/ic_caret_up.svg':'/assets/icons/ic_caret_down.svg'"
+            alt="Right Image" class="icon-image right-icon" *ngIf="showRightIcon">
+    </div>
+    <div *ngIf="expanded" class="accordion-content">
+        <ng-content></ng-content>
+    </div>
+</div>

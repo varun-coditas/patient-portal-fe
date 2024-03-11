@@ -1,0 +1,79 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "user1",
+      "password": "pass1"
+    },
+    {
+      "id": "2",
+      "username": "user2",
+      "password": "pass2"
+    },
+    {
+      "id": "2d04",
+      "email": "sejal.baser@coditas.com",
+      "password": "wrufgckd"
+    },
+    {
+      "id": "f87f",
+      "email": "sejal.baser@coditas.com",
+      "password": "wrufgckdv "
+    },
+    {
+      "id": "ec88",
+      "email": "sejal.baser@coditas.com",
+      "password": "wrufgckds"
+    },
+    {
+      "id": "2442",
+      "email": "seeed@efe",
+      "password": "wrufgdwsd"
+    },
+    {
+      "id": "180c",
+      "email": "seeed@efevff",
+      "password": "wrufgdwsd"
+    },
+    {
+      "id": "53ca",
+      "email": "seeed@efevff",
+      "password": "wrufgdwsd"
+    },
+    {
+      "id": "07ad",
+      "email": "seeed@efevff",
+      "password": "wrufgdwsd"
+    },
+    {
+      "id": "6cdc",
+      "email": "seeed@efevff",
+      "password": "wrufgdwsd"
+    },
+    {
+      "id": "5ec9",
+      "email": "seeed@efevff",
+      "password": "wrufgdwsd"
+    },
+    {
+      "id": "d33e",
+      "email": "seeed@dwdf",
+      "password": "wrufgdwsd"
+    },
+    {
+      "id": "654e",
+      "email": "seeed@dwdf",
+      "password": "wrufgdwsd"
+    },
+    {
+      "id": "789d",
+      "email": "seeed@dwdfvf",
+      "password": "wrufgdwsd"
+    },
+    {
+      "id": "a1c7",
+      "email": "seeed@dwdfvf",
+      "password": "wrufgdwsd"
+    }
+  ]
+}

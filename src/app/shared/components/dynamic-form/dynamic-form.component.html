@@ -1,0 +1,95 @@
+<div class="form">
+	@if (dynamicForm) {
+
+	<form [formGroup]="dynamicForm" (ngSubmit)="onSubmit()">
+		@for (row of formsfields; track $index;) {
+		<div
+			class="form__row"
+			[style.gridTemplateColumns]="'repeat(' + row.length + ', 1fr)'">
+			@for (field of row; track $index) { @if (field.innerFields &&
+			field.innerFields.length > 0 ) {
+			<div class="form__innerField">
+				<div class="form__innerField-text">
+					<span class="body-3-14-bold">{{ field.label }}</span>
+				</div>
+				<div class="form__elements">
+					@for (innerField of field.innerFields; track $index) { @if
+					(innerField.type == 'file') {
+					<app-upload
+						[required]="innerField.required ?? true"
+						[type]="innerField.fileType ?? 'pdf'"
+						[formControlName]="innerField.name"
+						[uploadedFiles]="uploadedFiles"></app-upload>
+					} @else if (innerField.type == 'dropdown' &&
+					innerField.dropdownConfig) { @if
+					(innerField.dropdownConfig.dropdownOptions?.length) {
+					<ada-dropdown
+						[required]="innerField.required ?? true"
+						[formControlName]="innerField.name"
+						[dropDownConfig]="
+							innerField.dropdownConfig
+						"></ada-dropdown>
+					} } @else if (field.type == 'textarea') {
+					<ada-textarea
+						[letterLimit]="200"
+						[formControlName]="innerField.name"
+						[placeholder]="innerField.placeholder ?? ''"
+						[required]="innerField.required ?? true">
+						<div label>{{ innerField.label }}</div>
+					</ada-textarea>
+					}@else {
+					<ada-input
+						[required]="innerField.required ?? true"
+						[type]="innerField.type"
+						[formControlName]="innerField.name"
+						[placeholder]="innerField.placeholder ?? ''"
+						><div label>{{ innerField.label }}</div>
+						@if (innerField.helperText) {
+						<div secondaryLabel>
+							{{ innerField.helperText }}
+						</div>
+						}
+					</ada-input>
+
+					} }
+				</div>
+			</div>
+			} @else if (field.type == 'file') {
+			<app-upload
+				[type]="field.fileType ?? 'pdf'"
+				(upload)="upload($event, field.name)"
+				[uploadedFiles]="uploadedFiles"></app-upload>
+			} @else if (field.type == 'textarea') {
+			<ada-textarea
+				[letterLimit]="200"
+				[formControlName]="field.name"
+				[placeholder]="field.placeholder ?? ''"
+				[required]="field.required ?? true">
+				<div label>{{ field.label }}</div>
+			</ada-textarea>
+			}@else if (field.type == 'dropdown' && field.dropdownConfig) {
+			<ada-dropdown
+				[dropDownConfig]="field.dropdownConfig"
+				[formControlName]="field.name"
+				[required]="field.required ?? true"
+				(valueSelected)="value()"></ada-dropdown>
+			} @else {
+
+			<ada-input
+				[type]="field.type"
+				[formControlName]="field.name"
+				[placeholder]="field.placeholder ?? ''"
+				[required]="field.required ?? true"
+				><div label>{{ field.label }}</div>
+				@if (field.helperText) {
+				<div secondaryLabel>
+					{{ field.helperText }}
+				</div>
+				}
+			</ada-input>
+			} }
+		</div>
+		}
+	</form>
+	}
+</div>

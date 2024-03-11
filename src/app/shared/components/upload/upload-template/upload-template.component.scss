@@ -1,0 +1,58 @@
+.upload {
+  border-radius: 8px;
+  border: 1px solid var(--gray-200);
+  background: var(--color-white-base, #fff);
+  padding: 16px;
+  margin: 10px 0px;
+  &.error {
+    border: 1px solid var(--Color-Accent---Caution-Red---200, #feccca);
+    background: var(--Color-Accent---Caution-Red---10, #fef9f9);
+  }
+  &-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-file {
+    color: var(--colors-text-primary-text);
+  }
+  &-size {
+    color: var(--colors-text-secondary-text);
+  }
+  &__file {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__icons {
+    display: flex;
+    justify-content: start;
+    img {
+      cursor: pointer;
+    }
+  }
+  &-content-failed {
+    display: flex;
+    justify-content: space-between;
+    &-file {
+      color: var(--colors-caution-red-700);
+    }
+    &-name {
+      color: var(--colors-caution-red-700);
+    }
+    &__file {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &__icons {
+      display: flex;
+      justify-content: start;
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+  app-progress-bar {
+    margin-top: 4px;
+  }
+}

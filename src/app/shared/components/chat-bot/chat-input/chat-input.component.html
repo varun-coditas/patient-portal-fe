@@ -1,0 +1,14 @@
+<div class="input">
+  <ada-input
+    (keyup.enter)="onSendClick()"
+    placeholder="Type message here"
+    (onInputValueChange)="setValue($event)"
+    [(ngModel)]="message"
+    [isDisabled]="isDisable"
+  ></ada-input>
+  <img
+    src="../../../../assets/images/chat-send-icon.svg"
+    alt="chat-button"
+    (click)="onSendClick()"
+  />
+</div>

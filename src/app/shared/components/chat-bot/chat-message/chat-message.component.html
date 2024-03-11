@@ -1,0 +1,31 @@
+<div class="chat">
+	@if (type == 'ai') {
+	<div class="chat__avatar">
+		<img src="../../../../../assets/images/coditas-logo.png" alt="" />
+		<span class="chat__avatar-text">Therixs.ai</span>
+	</div>
+	<div class="chat__message">
+		<span class="chat__message-text" [innerHTML]="message"></span>
+	</div>
+	<div class="chat__time">
+		<span>{{ convertTimeStampToDateString(timeStamp) | timeStamp }}</span>
+	</div>
+	} @else {
+	<div class="chatUser">
+		<div class="chatUser--width">
+			<div class="chatUser__avatar">
+				<div class="chatUser__avatar-circle"><span>VS</span></div>
+				<span class="chat__avatar-text">You</span>
+			</div>
+			<div class="chatUser__message">
+				<span class="chatUser__message-text" [innerHTML]="message" ></span>
+			</div>
+			<div class="chatUser__time">
+				<span>{{
+					convertTimeStampToDateString(timeStamp) | timeStamp
+				}}</span>
+			</div>
+		</div>
+	</div>
+	}
+</div>

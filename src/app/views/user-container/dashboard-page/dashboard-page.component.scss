@@ -1,0 +1,105 @@
+.welcomeContainer {
+  box-sizing: border-box;
+  margin-top: 20px;
+  border-radius: 8px;
+  background: url("/assets/images/bg-welcome.png"),
+    lightgray 50% / cover no-repeat;
+  background-size: cover;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  ada-input {
+    width: 380px;
+  }
+  &-welcome {
+    color: var(--color-white, #fff);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 30px */
+  }
+  &-para {
+    color: var(--color-white, #fff);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+  }
+  &-button {
+    background-color: black !important;
+  }
+  &__flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+  }
+}
+
+.pipeline {
+  margin-top: 24px;
+  border-radius: 8px;
+  padding: 24px;
+  box-sizing: border-box;
+  background-color: #fff;
+  overflow: hidden;
+  height: calc(100vh - 350px);
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-heading {
+      color: #282828;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%;
+    }
+    &-subhead {
+      color: #5a5a5a;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%; /* 21px */
+    }
+  }
+
+  &__table {
+    height: calc(100vh - 550px);
+    tbody {
+      max-height: calc(100vh - 585px);
+    }
+    &-text {
+      color: #282828;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%;
+    }
+    &-tr {
+      box-sizing: border-box;
+      border: 1px solid var(--color-bg-grey, #f2f4f6);
+    }
+    td {
+      box-sizing: border-box;
+    }
+  }
+
+  &__pagination {
+    margin-top: 24px;
+  }
+}
+
+.p-left-12 {
+  padding-left: 12px;
+}
+.m-left-16 {
+  margin-left: 16px;
+}
+.m-left-12 {
+  margin-left: 12px;
+}
+.cursor-pointer {
+  cursor: pointer;
+}

@@ -1,0 +1,166 @@
+<div class="welcomeContainer">
+	<div>
+		<p class="welcomeContainer-welcome">Welcome back, {{ name }}!</p>
+		<p class="welcomeContainer-para">
+			{{ welcomeMessage }}
+		</p>
+	</div>
+	<ada-button class="welcomeContainer-button" (click)="onCreatePipline()">
+		<div class="welcomeContainer__flex">
+			<img class="plus" src="../../../../assets/images/plus.svg" alt="" />
+			<span>Create Pipeline</span>
+		</div>
+	</ada-button>
+</div>
+<div class="pipeline">
+	<div class="pipeline__title">
+		<div>
+			<p class="pipeline__title-heading">All Pipelines</p>
+			<p class="pipeline__title-subhead">
+				View the pipeline list that you have created
+			</p>
+		</div>
+		<ada-input
+			placeholder="Search..."
+			(onInputValueChange)="search($event)">
+			<img
+				inputPrefix
+				src="../../../../assets/images/search-icon.svg"
+				alt="user Icon"
+		/></ada-input>
+	</div>
+	<div class="pipeline__table">
+		<ada-table>
+			<thead tableHeader class="table--header">
+				<tr tableRow>
+					<th tableHeadingCell alignCellContent="left">
+						<div class="th__first">
+							<div class="th__first--title pipeline__table-text">
+								Patient Name
+							</div>
+							<app-sort-icon
+								(sort)="sort($event, 'name')"
+								class="p-left-12"></app-sort-icon>
+						</div>
+					</th>
+
+					<th tableHeadingCell alignCellContent="left">
+						<div class="th__middle">
+							<div class="th__middle--title pipeline__table-text">
+								Age
+							</div>
+						</div>
+					</th>
+					<th tableHeadingCell alignCellContent="left">
+						<div class="th__middle pipeline__table-text">
+							Medical History
+						</div>
+					</th>
+
+					<th tableHeadingCell alignCellContent="left">
+						<div class="th__middle">
+							<div class="th__middle--title pipeline__table-text">
+								Allergies
+							</div>
+						</div>
+					</th>
+
+					<th tableHeadingCell alignCellContent="center">
+						<div class="th__last pipeline__table-text">Action</div>
+					</th>
+				</tr>
+			</thead>
+
+			<tbody tableBody class="scroll-basic-4">
+				<tr
+					tableRow
+					*ngFor="let data of tableData; let i = index"
+					class="pipeline__table-tr">
+					<td
+						tableData
+						alignCellContent="left"
+						[ngClass]="{
+							'table--cell--disabled': isTableDisabled
+						}">
+						<div class="data_left">
+							<span class="data_text">{{
+								data.name
+							}}</span>
+						</div>
+					</td>
+
+					<td tableData alignCellContent="left">
+						<div>
+							<div class="data_middle">
+								
+								<span class="data_text">{{ data.age }}</span>
+								
+							</div>
+						</div>
+					</td>
+					<td
+						tableData
+						alignCellContent="left"
+						[ngClass]="{
+							'table--cell--disabled': isTableDisabled
+						}">
+						<div>
+							<div class="data_middle">
+								
+								<span class="data_text">
+									@if(data.medical_history.length > 0){
+									<app-chip
+										*ngFor="let chip of data.medical_history"
+										[chipText]="chip">
+									</app-chip>
+									} @else {
+										<span class="data_text">--</span>
+									}
+								</span>
+								
+							</div>
+						</div>
+					</td>
+					<td tableData alignCellContent="left">
+						<div>
+							<div class="data_middle">
+								<span class="data_text">
+									@if(data.allergies.length > 0){
+									<app-chip
+										*ngFor="let chip of data.allergies"
+										[chipText]="chip"
+										(click)="openPlayground(data, chip)"
+										[isDisable]="data.status == 'IN_DRAFT'">
+									</app-chip>
+									} @else {
+									<span class="data_text">--</span>
+									}
+								</span>
+							</div>
+						</div>
+					</td>
+
+					<td tableData alignCellContent="center">
+						<img
+							src="/assets/images/edit-icon.svg"
+							alt="Edit"
+							class="m-left-16 cursor-pointer"
+							(click)="editPipeline(data.pipelineId)" />
+						<img
+							src="/assets/images/delete-icon.svg"
+							alt="delete"
+							class="cursor-pointer"
+							(click)="deletePipeline(data.pipelineId, data)" />
+					</td>
+				</tr>
+			</tbody>
+		</ada-table>
+	</div>
+	<div class="pipeline__pagination">
+		<ada-pagination
+			[paginationConfig]="paginationConfig"
+			(paginationOutputDetails)="
+				handlePaginationResponseData($event)
+			"></ada-pagination>
+	</div>
+</div>

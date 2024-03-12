@@ -35,10 +35,11 @@ export class LoginPageComponent {
       .authenticate(email, this.loginForm.value.password)
       .subscribe({
         next: (value) => {
+          console.log(value);
           this.authService.loginSuccess(value.token);
         },
         error: (err: HttpErrorResponse) => {
-          if (err.status == 400) {
+          if (err.status == 400) {  
             this.authenticationFail = true;
           } else {
             this.authenticationFail = true; // when error popup for all error is added than replace this

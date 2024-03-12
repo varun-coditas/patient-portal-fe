@@ -10,12 +10,14 @@ const USERS = [
 	{
 		email: "david@gmail.com",
 		password: "123456",
-		name: "David Roberson"
+		name: "David Roberson",
+		token: "david-token"
 	},
 	{
 		email: "thomas@gmail.com",
 		password: "123456",
-		name: "Thomas Smith"
+		name: "Thomas Smith",
+		token: "thomas-token"
 	}
 ]
 
@@ -36,8 +38,11 @@ export class AuthService {
 		email: string | undefined | null,
 		password: string | undefined | null
 	): Observable<any> {
+		
 		const body = { email, password };
+		console.log(body);
 		const user = USERS.find((u) => u.email === email && u.password === password);
+		console.log(user);
 		return of(user);
 		// return this.http.post<{ token: string }>(`/user/login/`, body);
 	}

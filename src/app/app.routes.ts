@@ -14,7 +14,7 @@ export const routes: Routes = [
       { path: 'pipeline-config/:id', component: CreatePipelineComponent },
       { path: 'pipeline-config/:id/edit', component: CreatePipelineComponent },
       { path: 'patient-details', component: CreatePipelineComponent}
-    ],
+    ]
   },
   {
     path: 'login',
